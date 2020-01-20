@@ -1,0 +1,30 @@
+on:
+  push:
+    tags:
+      - v*
+name: Publish to Npm
+jobs:
+  publishToNpm:
+    name: Install, Build, Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.head.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: https://registry.npmjs.org/
+      - name: Install
+        run: yarn install
+      - name: Test
+        run: yarn test
+        env:
+          CI: true
+      - name: Build
+        run: yarn build
+      - name: Check Package Size
+        run: yarn checksize
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
