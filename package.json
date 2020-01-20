@@ -1,10 +1,10 @@
 {
-  "name": "@traveloka/web-package-template",
+  "name": "@traveloka/greg-cal",
   "version": "0.0.0",
-  "repository": "git@github.com:traveloka/web-package-template.git",
+  "repository": "git@github.com:traveloka/@traveloka/greg-cal.git",
   "main": "dist/index.js",
-  "umd:main": "dist/web-package-template.umd.production.js",
-  "module": "dist/web-package-template.esm.production.js",
+  "umd:main": "dist/@traveloka/greg-cal.umd.production.js",
+  "module": "dist/@traveloka/greg-cal.esm.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -14,8 +14,7 @@
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom",
     "prepare-release": "standard-version -a",
-    "checksize": "bundlesize",
-    "setup": "cd ./setup && yarn install && node index.js"
+    "checksize": "bundlesize"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -48,7 +47,7 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/web-package-template.cjs.production.min.js",
+      "path": "./dist/@traveloka/greg-cal.cjs.production.min.js",
       "maxSize": "2 kB"
     }
   ],
@@ -62,5 +61,6 @@
     "collectCoverageFrom": [
       "src/**/*.{js,ts,tsx}"
     ]
-  }
+  },
+  "private": true
 }
