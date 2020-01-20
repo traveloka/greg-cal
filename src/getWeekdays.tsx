@@ -1,14 +1,11 @@
+type Locale = string;
+type Format = 'long' | 'short';
+type FirstDayOfTheWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
+
 export default (
-  locale: string = 'en-US',
-  type: 'long' | 'short' = 'short',
-  firstDayOfTheWeek:
-    | 'sun'
-    | 'mon'
-    | 'tue'
-    | 'wed'
-    | 'thu'
-    | 'fri'
-    | 'sat' = 'sun'
+  locale: Locale = 'en-US',
+  format: Format = 'short',
+  firstDayOfTheWeek: FirstDayOfTheWeek = 'sun'
 ) => {
   let dates = [
     new Date('1995-03-26'),
@@ -50,5 +47,5 @@ export default (
       dates = dates.slice(0, 7);
   }
 
-  return dates.map(date => date.toLocaleString(locale, { weekday: type }));
+  return dates.map(date => date.toLocaleString(locale, { weekday: format }));
 };
