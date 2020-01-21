@@ -40,7 +40,7 @@ describe('Weekday string format test', () => {
   });
 });
 
-describe('First day of the week tests', () => {
+describe('First day of the week test', () => {
   test('mon', () => {
     expect(getWeekdays('en-US', 'short', 'mon')).toEqual([
       'Mon',
@@ -50,18 +50,6 @@ describe('First day of the week tests', () => {
       'Fri',
       'Sat',
       'Sun',
-    ]);
-  });
-
-  test('sat', () => {
-    expect(getWeekdays('en-US', 'short', 'sat')).toEqual([
-      'Sat',
-      'Sun',
-      'Mon',
-      'Tue',
-      'Wed',
-      'Thu',
-      'Fri',
     ]);
   });
 });
