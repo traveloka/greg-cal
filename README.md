@@ -12,7 +12,7 @@ $ yarn add @traveloka/greg-cal
 
 # List of Utilities
 
-## 1. getDates
+## 1. getDates()
 
 Get an array of calendar dates for a given month and year appended with empty dates to fill the days before the first calendar day.
 
@@ -37,7 +37,7 @@ getDates(2018, 8, 'mon');
 // => [ null, null, null, null, null, 2018-08-31T17:00:00.000Z, 2018-09-01T17:00:00.000Z, ... ]
 ```
 
-## 2. getMonths
+## 2. getMonths()
 
 Get all localized month names in a year.
 
@@ -58,10 +58,10 @@ Get all localized month names in a year.
 
 ```js
 getMonths('en-US', 'short');
-//=> [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+//=> [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
 ```
 
-## 3. getWeekdays
+## 3. getWeekdays()
 
 Get all localized weekday names in a year.
 
