@@ -1,6 +1,6 @@
 # Greg Cal
 
-A Collection of TypeScript utilities for implementing Gregorian Calendar. Fully-typed with additional JSDoc annotations for easy usage.
+A Collection of TypeScript utilities for implementing Gregorian Calendar. Zero-dependency and fully-typed with additional JSDoc annotations for easy usage.
 
 # Installation
 
