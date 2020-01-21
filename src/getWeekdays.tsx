@@ -1,12 +1,22 @@
-type Locale = string;
-type Format = 'long' | 'short';
-type FirstDayOfTheWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
-
-export default (
-  locale: Locale = 'en-US',
-  format: Format = 'short',
-  firstDayOfTheWeek: FirstDayOfTheWeek = 'sun'
-) => {
+/**
+ * Get all localized weekday names
+ * @param locale Locale code
+ * @param format Weekday format
+ * @param firstDayOfTheWeek First day of the week
+ * @return Weekday names
+ */
+function getWeekdays(
+  locale: string = 'en-US',
+  format: 'long' | 'short' = 'short',
+  firstDayOfTheWeek:
+    | 'sun'
+    | 'mon'
+    | 'tue'
+    | 'wed'
+    | 'thu'
+    | 'fri'
+    | 'sat' = 'sun'
+): Array<string> {
   let dates = [
     new Date('1995-03-26'),
     new Date('1995-03-27'),
@@ -48,4 +58,6 @@ export default (
   }
 
   return dates.map(date => date.toLocaleString(locale, { weekday: format }));
-};
+}
+
+export default getWeekdays;

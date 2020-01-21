@@ -1,10 +1,13 @@
-type Locale = string;
-type Format = 'numeric' | '2-digit' | 'long' | 'short';
-
-export default (
-  locale: Locale = 'en-US',
-  format: Format = 'long'
-): Array<string> => {
+/**
+ * Get all localized month names
+ * @param locale Locale code
+ * @param format Month format
+ * @returns Month names
+ */
+function getMonths(
+  locale: string = 'en-US',
+  format: 'numeric' | '2-digit' | 'long' | 'short' = 'long'
+): Array<string> {
   const date = new Date('1995-01-01');
   const months = [];
 
@@ -15,4 +18,6 @@ export default (
   }
 
   return months;
-};
+}
+
+export default getMonths;
