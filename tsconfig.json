@@ -24,6 +24,7 @@
     "paths": {
       "*": ["src/*", "node_modules/*"]
     },
+    "jsx": "react",
     "esModuleInterop": true,
     "allowJs": true,
     "outDir": "dist"
