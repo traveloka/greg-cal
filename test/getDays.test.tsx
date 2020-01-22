@@ -1,8 +1,8 @@
-import getWeekdays from '../src/getWeekdays';
+import getDays from '../src/getDays';
 
 describe('Localization tests', () => {
   test('default (en-US)', () => {
-    expect(getWeekdays()).toEqual([
+    expect(getDays()).toEqual([
       'Sun',
       'Mon',
       'Tue',
@@ -14,7 +14,7 @@ describe('Localization tests', () => {
   });
 
   test('id-ID', () => {
-    expect(getWeekdays('id-ID')).toEqual([
+    expect(getDays('id-ID')).toEqual([
       'Min',
       'Sen',
       'Sel',
@@ -28,7 +28,7 @@ describe('Localization tests', () => {
 
 describe('Weekday string format test', () => {
   test('long', () => {
-    expect(getWeekdays('en-US', 'long')).toEqual([
+    expect(getDays('en-US', 'long')).toEqual([
       'Sunday',
       'Monday',
       'Tuesday',
@@ -42,7 +42,7 @@ describe('Weekday string format test', () => {
 
 describe('First day of the week test', () => {
   test('mon', () => {
-    expect(getWeekdays('en-US', 'short', 'mon')).toEqual([
+    expect(getDays('en-US', 'short', 'mon')).toEqual([
       'Mon',
       'Tue',
       'Wed',

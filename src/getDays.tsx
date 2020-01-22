@@ -5,7 +5,7 @@
  * @param firstDayOfTheWeek First day of the week
  * @return Weekday names
  */
-function getWeekdays(
+function getDays(
   locale: string = 'en-US',
   format: 'long' | 'short' = 'short',
   firstDayOfTheWeek: 'sun' | 'mon' = 'sun'
@@ -32,4 +32,4 @@ function getWeekdays(
   return dates.map(date => date.toLocaleString(locale, { weekday: format }));
 }
 
-export default getWeekdays;
+export default getDays;

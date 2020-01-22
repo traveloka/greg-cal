@@ -37,7 +37,32 @@ getDates(2018, 8, 'mon');
 // => [ null, null, null, null, null, 2018-08-31T17:00:00.000Z, 2018-09-01T17:00:00.000Z, ... ]
 ```
 
-## 2. getMonths()
+## 2. getDays()
+
+Get all localized day names in a week.
+
+### Arguments
+
+| Name              | Type                | Default Value | Description                                                  |
+| ----------------- | ------------------- | ------------- | ------------------------------------------------------------ |
+| locale            | `string`            | `"en-US"`     | Locale code (e.g. "en-US", "id-ID")                          |
+| format            | `"long" or "short"` | `"short"`     | Day format                                                   |
+| firstDayOfTheWeek | `"sun"` or `"mon"`  | `"sun"`       | First day of the week, "sun" for Sunday and "mon" for Monday |
+
+### Returns
+
+| Type       | Description |
+| ---------- | ----------- |
+| `string[]` | Day names   |
+
+### Example
+
+```js
+getDays('en-US', 'short', 'mon');
+//=> [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
+```
+
+## 3. getMonths()
 
 Get all localized month names in a year.
 
@@ -59,29 +84,4 @@ Get all localized month names in a year.
 ```js
 getMonths('en-US', 'short');
 //=> [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
-```
-
-## 3. getWeekdays()
-
-Get all localized weekday names in a year.
-
-### Arguments
-
-| Name              | Type                | Default Value | Description                                                  |
-| ----------------- | ------------------- | ------------- | ------------------------------------------------------------ |
-| locale            | `string`            | `"en-US"`     | Locale code (e.g. "en-US", "id-ID")                          |
-| format            | `"long" or "short"` | `"short"`     | Weekday format                                               |
-| firstDayOfTheWeek | `"sun"` or `"mon"`  | `"sun"`       | First day of the week, "sun" for Sunday and "mon" for Monday |
-
-### Returns
-
-| Type       | Description   |
-| ---------- | ------------- |
-| `string[]` | Weekday names |
-
-### Example
-
-```js
-getWeekdays('en-US', 'short', 'mon');
-//=> [ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
 ```
