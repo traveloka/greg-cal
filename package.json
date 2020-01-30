@@ -55,6 +55,5 @@
     "collectCoverageFrom": [
       "src/**/*.{js,ts,tsx}"
     ]
-  },
-  "private": true
+  }
 }
