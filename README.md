@@ -7,7 +7,7 @@ A Collection of TypeScript utilities for implementing calendar and datepicker. Z
 Using yarn:
 
 ```
-$ yarn add @traveloka/greg-cal
+$ yarn add greg-cal
 ```
 
 # List of Utilities

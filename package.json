@@ -1,7 +1,7 @@
 {
-  "name": "@traveloka/greg-cal",
+  "name": "greg-cal",
   "version": "1.0.2",
-  "repository": "git@github.com:traveloka/@traveloka/greg-cal.git",
+  "repository": "git@github.com:traveloka/greg-cal.git",
   "main": "dist/index.js",
   "umd:main": "dist/greg-cal.umd.production.js",
   "module": "dist/greg-cal.esm.production.js",
